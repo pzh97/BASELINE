@@ -1,0 +1,207 @@
+slurmstepd: info: Setting TMPDIR to /scratch/2797843. Previous errors about TMPDIR can be discarded
+11/25/2025 14:25:45 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, 16-bits training: True
+11/25/2025 14:25:45 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso395/tensorboard_logs/bert_ddp,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=2.0,
+optim=adamw_torch_fused,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso395/bert_outputs/squad_ddp,
+overwrite_output_dir=False,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=4,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+11/25/2025 14:25:45 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, 16-bits training: True
+11/25/2025 14:25:48 - INFO - datasets.builder - Found cached dataset squad (/home/ulc/cursos/curso395/.cache/huggingface/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f)
+11/25/2025 14:25:50 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /home/ulc/cursos/curso395/.cache/huggingface/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-e8db69103717c759_*_of_00001.arrow
+11/25/2025 14:25:51 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /home/ulc/cursos/curso395/.cache/huggingface/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-5b58f7c131b7991d_*_of_00001.arrow
+11/25/2025 14:25:52 - WARNING - accelerate.utils.other - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 2.5742, 'grad_norm': 21.689306259155273, 'learning_rate': 2.9323603831556117e-05, 'epoch': 0.05}
+{'loss': 1.5955, 'grad_norm': 25.422922134399414, 'learning_rate': 2.8645852159768664e-05, 'epoch': 0.09}
+{'loss': 1.4551, 'grad_norm': 16.402603149414062, 'learning_rate': 2.7968100487981204e-05, 'epoch': 0.14}
+{'loss': 1.3541, 'grad_norm': 11.676108360290527, 'learning_rate': 2.7290348816193748e-05, 'epoch': 0.18}
+{'loss': 1.3131, 'grad_norm': 37.086666107177734, 'learning_rate': 2.661259714440629e-05, 'epoch': 0.23}
+{'loss': 1.279, 'grad_norm': 25.097728729248047, 'learning_rate': 2.5934845472618836e-05, 'epoch': 0.27}
+{'loss': 1.289, 'grad_norm': 21.73429298400879, 'learning_rate': 2.5257093800831376e-05, 'epoch': 0.32}
+{'loss': 1.2168, 'grad_norm': 16.63125991821289, 'learning_rate': 2.457934212904392e-05, 'epoch': 0.36}
+{'loss': 1.2475, 'grad_norm': 18.015247344970703, 'learning_rate': 2.390159045725646e-05, 'epoch': 0.41}
+{'loss': 1.1996, 'grad_norm': 28.022357940673828, 'learning_rate': 2.3223838785469007e-05, 'epoch': 0.45}
+{'loss': 1.0827, 'grad_norm': 23.856576919555664, 'learning_rate': 2.2546087113681547e-05, 'epoch': 0.5}
+{'loss': 1.1457, 'grad_norm': 25.176254272460938, 'learning_rate': 2.186833544189409e-05, 'epoch': 0.54}
+{'loss': 1.1301, 'grad_norm': 27.562026977539062, 'learning_rate': 2.119058377010663e-05, 'epoch': 0.59}
+{'loss': 1.1337, 'grad_norm': 15.652989387512207, 'learning_rate': 2.051283209831918e-05, 'epoch': 0.63}
+{'loss': 1.1357, 'grad_norm': 27.27155113220215, 'learning_rate': 1.983508042653172e-05, 'epoch': 0.68}
+{'loss': 1.0969, 'grad_norm': 17.067039489746094, 'learning_rate': 1.9157328754744263e-05, 'epoch': 0.72}
+{'loss': 1.0794, 'grad_norm': 25.220409393310547, 'learning_rate': 1.8479577082956803e-05, 'epoch': 0.77}
+{'loss': 1.0344, 'grad_norm': 31.263668060302734, 'learning_rate': 1.780182541116935e-05, 'epoch': 0.81}
+{'loss': 1.0446, 'grad_norm': 22.01447105407715, 'learning_rate': 1.712407373938189e-05, 'epoch': 0.86}
+{'loss': 1.0732, 'grad_norm': 135.25106811523438, 'learning_rate': 1.6446322067594434e-05, 'epoch': 0.9}
+{'loss': 1.0404, 'grad_norm': 23.323923110961914, 'learning_rate': 1.5768570395806975e-05, 'epoch': 0.95}
+{'loss': 1.0184, 'grad_norm': 15.289520263671875, 'learning_rate': 1.509081872401952e-05, 'epoch': 0.99}
+{'loss': 0.7516, 'grad_norm': 10.238725662231445, 'learning_rate': 1.4413067052232062e-05, 'epoch': 1.04}
+{'loss': 0.7013, 'grad_norm': 25.23944664001465, 'learning_rate': 1.3735315380444604e-05, 'epoch': 1.08}
+{'loss': 0.7208, 'grad_norm': 15.086358070373535, 'learning_rate': 1.3057563708657148e-05, 'epoch': 1.13}
+{'loss': 0.708, 'grad_norm': 7.358154296875, 'learning_rate': 1.237981203686969e-05, 'epoch': 1.17}
+{'loss': 0.7045, 'grad_norm': 28.046600341796875, 'learning_rate': 1.1702060365082235e-05, 'epoch': 1.22}
+{'loss': 0.6772, 'grad_norm': 10.21268081665039, 'learning_rate': 1.1024308693294777e-05, 'epoch': 1.27}
+{'loss': 0.7299, 'grad_norm': 4.6410603523254395, 'learning_rate': 1.0346557021507321e-05, 'epoch': 1.31}
+{'loss': 0.7162, 'grad_norm': 18.365901947021484, 'learning_rate': 9.668805349719863e-06, 'epoch': 1.36}
+{'loss': 0.7406, 'grad_norm': 18.900453567504883, 'learning_rate': 8.991053677932407e-06, 'epoch': 1.4}
+{'loss': 0.6855, 'grad_norm': 46.057373046875, 'learning_rate': 8.313302006144949e-06, 'epoch': 1.45}
+{'loss': 0.712, 'grad_norm': 17.59005355834961, 'learning_rate': 7.635550334357493e-06, 'epoch': 1.49}
+{'loss': 0.7032, 'grad_norm': 9.434834480285645, 'learning_rate': 6.957798662570035e-06, 'epoch': 1.54}
+{'loss': 0.6654, 'grad_norm': 11.885857582092285, 'learning_rate': 6.2800469907825776e-06, 'epoch': 1.58}
+{'loss': 0.7093, 'grad_norm': 13.127157211303711, 'learning_rate': 5.6022953189951204e-06, 'epoch': 1.63}
+{'loss': 0.6974, 'grad_norm': 9.096728324890137, 'learning_rate': 4.924543647207663e-06, 'epoch': 1.67}
+{'loss': 0.6858, 'grad_norm': 17.068063735961914, 'learning_rate': 4.246791975420206e-06, 'epoch': 1.72}
+{'loss': 0.7114, 'grad_norm': 38.17742156982422, 'learning_rate': 3.569040303632749e-06, 'epoch': 1.76}
+{'loss': 0.6631, 'grad_norm': 22.668785095214844, 'learning_rate': 2.891288631845292e-06, 'epoch': 1.81}
+{'loss': 0.7077, 'grad_norm': 6.620436191558838, 'learning_rate': 2.213536960057835e-06, 'epoch': 1.85}
+{'loss': 0.6588, 'grad_norm': 16.971548080444336, 'learning_rate': 1.5357852882703778e-06, 'epoch': 1.9}
+{'loss': 0.6686, 'grad_norm': 6.243508338928223, 'learning_rate': 8.580336164829206e-07, 'epoch': 1.94}
+{'loss': 0.6817, 'grad_norm': 22.37936019897461, 'learning_rate': 1.8028194469546358e-07, 'epoch': 1.99}
+Training time: 1540.66 seconds
+{'train_runtime': 1540.04, 'train_samples_per_second': 114.963, 'train_steps_per_second': 14.371, 'train_loss': 0.9741705314130178, 'epoch': 2.0}
+Training time: 1540.66 seconds
+***** train metrics *****
+  epoch                    =        2.0
+  total_flos               = 32315140GF
+  train_loss               =     0.9742
+  train_runtime            = 0:25:40.03
+  train_samples            =      88524
+  train_samples_per_second =    114.963
+  train_steps_per_second   =     14.371
+11/25/2025 14:51:37 - INFO - __main__ - *** Evaluate ***
+11/25/2025 14:52:00 - INFO - utils_qa - Post-processing 10570 example predictions split into 10784 features.
+11/25/2025 14:52:30 - INFO - utils_qa - Saving predictions to /mnt/netapp2/Store_uni//home/ulc/cursos/curso395/bert_outputs/squad_ddp/eval_predictions.json.
+11/25/2025 14:52:30 - INFO - utils_qa - Saving nbest_preds to /mnt/netapp2/Store_uni//home/ulc/cursos/curso395/bert_outputs/squad_ddp/eval_nbest_predictions.json.
+***** eval metrics *****
+  epoch                   =        2.0
+  eval_exact_match        =    81.4664
+  eval_f1                 =    88.5194
+  eval_runtime            = 0:00:10.86
+  eval_samples            =      10784
+  eval_samples_per_second =    992.377
+  eval_steps_per_second   =     62.024
