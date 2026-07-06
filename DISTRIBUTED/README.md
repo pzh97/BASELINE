@@ -220,14 +220,6 @@ Relative to the completed DDP run, the FSDP runtime was:
 
 This means FSDP did complete correctly after the optimizer change, but for this specific BERT-Base and SQuAD workload it did not outperform DDP in wall-clock time.
 
-For completeness, the first FSDP attempt failed during the optimizer step with:
-
-```text
-RuntimeError: output with shape [] doesn't match the broadcast shape [1]
-```
-
-That failure is no longer the final state of the FSDP experiment, because the patched rerun completed successfully.
-
 ## Deliverable Summary
 
 This deliverable satisfies the requirement to parallelize the baseline code using native PyTorch distributed training.
