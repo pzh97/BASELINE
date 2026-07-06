@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=bert_baseline          # Name of the job
-#SBATCH --output=baseline_output.log      # Standard output log
-#SBATCH --error=baseline_error.log        # Standard error log
+#SBATCH --output=baseline_output_here.log      # Standard output log
+#SBATCH --error=baseline_error_here.log        # Standard error log
 #SBATCH --time=01:00:00                   # Time limit (hh:mm:ss)
 #SBATCH --mem=16G                         # Total memory
 #SBATCH --cpus-per-task=32                # Number of CPU cores per task

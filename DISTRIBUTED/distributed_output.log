@@ -1,0 +1,418 @@
+slurmstepd: info: Setting TMPDIR to /scratch/8212248. Previous errors about TMPDIR can be discarded
+07/06/2026 05:38:07 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, 16-bits training: True
+07/06/2026 05:38:07 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, 16-bits training: True
+07/06/2026 05:38:07 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso395/tensorboard_logs/bert_distributed_a100,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=100,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=2.0,
+optim=adamw_torch_fused,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso395/bert_outputs/squad_distributed_a100,
+overwrite_output_dir=False,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=4,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+07/06/2026 05:38:08 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, 16-bits training: True
+07/06/2026 05:38:08 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, 16-bits training: True
+07/06/2026 05:38:08 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso395/tensorboard_logs/bert_distributed_a100,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=100,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=2.0,
+optim=adamw_torch_fused,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso395/bert_outputs/squad_distributed_a100,
+overwrite_output_dir=False,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=4,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+07/06/2026 05:38:10 - INFO - datasets.builder - Found cached dataset squad (/mnt/netapp2/Store_uni//home/ulc/cursos/curso395/huggingface_cache/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f)
+07/06/2026 05:38:10 - INFO - datasets.builder - Found cached dataset squad (/mnt/netapp2/Store_uni//home/ulc/cursos/curso395/huggingface_cache/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f)
+07/06/2026 05:38:13 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso395/huggingface_cache/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-1e0f086514b1557d_*_of_00008.arrow
+07/06/2026 05:38:13 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+07/06/2026 05:38:14 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso395/huggingface_cache/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-1e0f086514b1557d_*_of_00008.arrow
+07/06/2026 05:38:14 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+07/06/2026 05:38:14 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso395/huggingface_cache/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-951dad912a033940_*_of_00008.arrow
+07/06/2026 05:38:14 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+07/06/2026 05:38:14 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso395/huggingface_cache/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-951dad912a033940_*_of_00008.arrow
+07/06/2026 05:38:14 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+07/06/2026 05:38:15 - WARNING - accelerate.utils.other - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 3.813, 'grad_norm': 17.526639938354492, 'learning_rate': 2.973161033797217e-05, 'epoch': 0.02}
+{'loss': 2.3225, 'grad_norm': 15.672123908996582, 'learning_rate': 2.9460509669257186e-05, 'epoch': 0.04}
+{'loss': 2.0541, 'grad_norm': 15.10946273803711, 'learning_rate': 2.91894090005422e-05, 'epoch': 0.05}
+{'loss': 1.7182, 'grad_norm': 17.401193618774414, 'learning_rate': 2.891830833182722e-05, 'epoch': 0.07}
+{'loss': 1.6517, 'grad_norm': 13.361303329467773, 'learning_rate': 2.8647207663112236e-05, 'epoch': 0.09}
+{'loss': 1.5073, 'grad_norm': 16.24605369567871, 'learning_rate': 2.8376106994397257e-05, 'epoch': 0.11}
+{'loss': 1.4584, 'grad_norm': 20.141935348510742, 'learning_rate': 2.810500632568227e-05, 'epoch': 0.13}
+{'loss': 1.4922, 'grad_norm': 21.132810592651367, 'learning_rate': 2.7833905656967287e-05, 'epoch': 0.14}
+{'loss': 1.4183, 'grad_norm': 15.834306716918945, 'learning_rate': 2.7562804988252307e-05, 'epoch': 0.16}
+{'loss': 1.3284, 'grad_norm': 16.999149322509766, 'learning_rate': 2.729170431953732e-05, 'epoch': 0.18}
+{'loss': 1.3184, 'grad_norm': 24.334712982177734, 'learning_rate': 2.702060365082234e-05, 'epoch': 0.2}
+{'loss': 1.3417, 'grad_norm': 14.828898429870605, 'learning_rate': 2.6749502982107357e-05, 'epoch': 0.22}
+{'loss': 1.3458, 'grad_norm': 18.572465896606445, 'learning_rate': 2.647840231339237e-05, 'epoch': 0.23}
+{'loss': 1.2968, 'grad_norm': 17.955703735351562, 'learning_rate': 2.620730164467739e-05, 'epoch': 0.25}
+{'loss': 1.2732, 'grad_norm': 12.776744842529297, 'learning_rate': 2.5936200975962408e-05, 'epoch': 0.27}
+{'loss': 1.2786, 'grad_norm': 12.170660972595215, 'learning_rate': 2.5665100307247428e-05, 'epoch': 0.29}
+{'loss': 1.3271, 'grad_norm': 17.0751953125, 'learning_rate': 2.539399963853244e-05, 'epoch': 0.31}
+{'loss': 1.2681, 'grad_norm': 12.649483680725098, 'learning_rate': 2.512289896981746e-05, 'epoch': 0.33}
+{'loss': 1.2398, 'grad_norm': 12.54089641571045, 'learning_rate': 2.485179830110248e-05, 'epoch': 0.34}
+{'loss': 1.2274, 'grad_norm': 13.518976211547852, 'learning_rate': 2.4580697632387492e-05, 'epoch': 0.36}
+{'loss': 1.2654, 'grad_norm': 17.164260864257812, 'learning_rate': 2.4309596963672512e-05, 'epoch': 0.38}
+{'loss': 1.2083, 'grad_norm': 17.24224090576172, 'learning_rate': 2.403849629495753e-05, 'epoch': 0.4}
+{'loss': 1.259, 'grad_norm': 15.209508895874023, 'learning_rate': 2.3767395626242542e-05, 'epoch': 0.42}
+{'loss': 1.1582, 'grad_norm': 17.465957641601562, 'learning_rate': 2.3496294957527563e-05, 'epoch': 0.43}
+{'loss': 1.2215, 'grad_norm': 19.69859504699707, 'learning_rate': 2.322519428881258e-05, 'epoch': 0.45}
+{'loss': 1.1025, 'grad_norm': 9.876663208007812, 'learning_rate': 2.29540936200976e-05, 'epoch': 0.47}
+{'loss': 1.0906, 'grad_norm': 13.61994743347168, 'learning_rate': 2.2682992951382613e-05, 'epoch': 0.49}
+{'loss': 1.132, 'grad_norm': 17.19992446899414, 'learning_rate': 2.241189228266763e-05, 'epoch': 0.51}
+{'loss': 1.0885, 'grad_norm': 11.633193969726562, 'learning_rate': 2.214079161395265e-05, 'epoch': 0.52}
+{'loss': 1.155, 'grad_norm': 11.367304801940918, 'learning_rate': 2.1869690945237664e-05, 'epoch': 0.54}
+{'loss': 1.1378, 'grad_norm': 14.339396476745605, 'learning_rate': 2.1598590276522684e-05, 'epoch': 0.56}
+{'loss': 1.1464, 'grad_norm': 13.429313659667969, 'learning_rate': 2.13274896078077e-05, 'epoch': 0.58}
+{'loss': 1.0659, 'grad_norm': 19.161745071411133, 'learning_rate': 2.1056388939092714e-05, 'epoch': 0.6}
+{'loss': 1.1265, 'grad_norm': 15.121260643005371, 'learning_rate': 2.0785288270377734e-05, 'epoch': 0.61}
+{'loss': 1.1513, 'grad_norm': 14.31766128540039, 'learning_rate': 2.051418760166275e-05, 'epoch': 0.63}
+{'loss': 1.1614, 'grad_norm': 13.379959106445312, 'learning_rate': 2.024308693294777e-05, 'epoch': 0.65}
+{'loss': 1.0841, 'grad_norm': 11.916460037231445, 'learning_rate': 1.9971986264232785e-05, 'epoch': 0.67}
+{'loss': 1.1716, 'grad_norm': 10.33007526397705, 'learning_rate': 1.97008855955178e-05, 'epoch': 0.69}
+{'loss': 1.0447, 'grad_norm': 13.185892105102539, 'learning_rate': 1.942978492680282e-05, 'epoch': 0.7}
+{'loss': 1.0943, 'grad_norm': 16.55718421936035, 'learning_rate': 1.9158684258087835e-05, 'epoch': 0.72}
+{'loss': 1.0568, 'grad_norm': 16.820722579956055, 'learning_rate': 1.8887583589372855e-05, 'epoch': 0.74}
+{'loss': 1.0827, 'grad_norm': 21.9581356048584, 'learning_rate': 1.8616482920657872e-05, 'epoch': 0.76}
+{'loss': 1.0795, 'grad_norm': 14.143964767456055, 'learning_rate': 1.8345382251942886e-05, 'epoch': 0.78}
+{'loss': 1.0, 'grad_norm': 20.20255470275879, 'learning_rate': 1.8074281583227906e-05, 'epoch': 0.8}
+{'loss': 1.0397, 'grad_norm': 13.950767517089844, 'learning_rate': 1.7803180914512923e-05, 'epoch': 0.81}
+{'loss': 1.0602, 'grad_norm': 12.462967872619629, 'learning_rate': 1.7532080245797943e-05, 'epoch': 0.83}
+{'loss': 1.003, 'grad_norm': 11.628363609313965, 'learning_rate': 1.7260979577082956e-05, 'epoch': 0.85}
+{'loss': 1.0101, 'grad_norm': 17.140655517578125, 'learning_rate': 1.6989878908367973e-05, 'epoch': 0.87}
+{'loss': 1.1002, 'grad_norm': 10.417967796325684, 'learning_rate': 1.6718778239652993e-05, 'epoch': 0.89}
+{'loss': 1.0916, 'grad_norm': 11.375454902648926, 'learning_rate': 1.6447677570938007e-05, 'epoch': 0.9}
+{'loss': 1.0621, 'grad_norm': 12.87685775756836, 'learning_rate': 1.6176576902223027e-05, 'epoch': 0.92}
+{'loss': 1.0508, 'grad_norm': 11.5330228805542, 'learning_rate': 1.5905476233508044e-05, 'epoch': 0.94}
+{'loss': 1.026, 'grad_norm': 16.38372802734375, 'learning_rate': 1.5634375564793057e-05, 'epoch': 0.96}
+{'loss': 1.0243, 'grad_norm': 17.004329681396484, 'learning_rate': 1.5363274896078077e-05, 'epoch': 0.98}
+{'loss': 0.9701, 'grad_norm': 13.507017135620117, 'learning_rate': 1.5092174227363094e-05, 'epoch': 0.99}
+{'loss': 0.8567, 'grad_norm': 18.594589233398438, 'learning_rate': 1.4821073558648111e-05, 'epoch': 1.01}
+{'loss': 0.7631, 'grad_norm': 6.916511058807373, 'learning_rate': 1.4549972889933128e-05, 'epoch': 1.03}
+{'loss': 0.7188, 'grad_norm': 16.683902740478516, 'learning_rate': 1.4278872221218146e-05, 'epoch': 1.05}
+{'loss': 0.7147, 'grad_norm': 20.892253875732422, 'learning_rate': 1.4007771552503163e-05, 'epoch': 1.07}
+{'loss': 0.7508, 'grad_norm': 11.033896446228027, 'learning_rate': 1.3736670883788182e-05, 'epoch': 1.08}
+{'loss': 0.7958, 'grad_norm': 12.488729476928711, 'learning_rate': 1.3465570215073197e-05, 'epoch': 1.1}
+{'loss': 0.778, 'grad_norm': 13.73421573638916, 'learning_rate': 1.3194469546358214e-05, 'epoch': 1.12}
+{'loss': 0.7035, 'grad_norm': 25.533571243286133, 'learning_rate': 1.2923368877643232e-05, 'epoch': 1.14}
+{'loss': 0.7141, 'grad_norm': 11.54553508758545, 'learning_rate': 1.2652268208928249e-05, 'epoch': 1.16}
+{'loss': 0.7508, 'grad_norm': 12.601334571838379, 'learning_rate': 1.2381167540213267e-05, 'epoch': 1.17}
+{'loss': 0.7577, 'grad_norm': 10.243427276611328, 'learning_rate': 1.2110066871498282e-05, 'epoch': 1.19}
+{'loss': 0.6756, 'grad_norm': 8.154037475585938, 'learning_rate': 1.18389662027833e-05, 'epoch': 1.21}
+{'loss': 0.7224, 'grad_norm': 8.365105628967285, 'learning_rate': 1.1567865534068318e-05, 'epoch': 1.23}
+{'loss': 0.7349, 'grad_norm': 19.554576873779297, 'learning_rate': 1.1296764865353335e-05, 'epoch': 1.25}
+{'loss': 0.7121, 'grad_norm': 11.663697242736816, 'learning_rate': 1.1025664196638353e-05, 'epoch': 1.27}
+{'loss': 0.782, 'grad_norm': 9.202801704406738, 'learning_rate': 1.0754563527923368e-05, 'epoch': 1.28}
+{'loss': 0.7616, 'grad_norm': 12.132047653198242, 'learning_rate': 1.0483462859208385e-05, 'epoch': 1.3}
+{'loss': 0.753, 'grad_norm': 16.107242584228516, 'learning_rate': 1.0212362190493404e-05, 'epoch': 1.32}
+{'loss': 0.786, 'grad_norm': 16.46737289428711, 'learning_rate': 9.94126152177842e-06, 'epoch': 1.34}
+{'loss': 0.6645, 'grad_norm': 10.417444229125977, 'learning_rate': 9.670160853063439e-06, 'epoch': 1.36}
+{'loss': 0.7551, 'grad_norm': 21.58418083190918, 'learning_rate': 9.399060184348454e-06, 'epoch': 1.37}
+{'loss': 0.8008, 'grad_norm': 11.920197486877441, 'learning_rate': 9.12795951563347e-06, 'epoch': 1.39}
+{'loss': 0.7362, 'grad_norm': 14.334907531738281, 'learning_rate': 8.85685884691849e-06, 'epoch': 1.41}
+{'loss': 0.7221, 'grad_norm': 12.710578918457031, 'learning_rate': 8.585758178203506e-06, 'epoch': 1.43}
+{'loss': 0.7426, 'grad_norm': 26.33843231201172, 'learning_rate': 8.314657509488525e-06, 'epoch': 1.45}
+{'loss': 0.7343, 'grad_norm': 11.076030731201172, 'learning_rate': 8.043556840773541e-06, 'epoch': 1.46}
+{'loss': 0.7495, 'grad_norm': 11.364827156066895, 'learning_rate': 7.772456172058557e-06, 'epoch': 1.48}
+{'loss': 0.7422, 'grad_norm': 4.137075901031494, 'learning_rate': 7.501355503343575e-06, 'epoch': 1.5}
+{'loss': 0.7659, 'grad_norm': 13.164024353027344, 'learning_rate': 7.230254834628593e-06, 'epoch': 1.52}
+{'loss': 0.68, 'grad_norm': 10.348344802856445, 'learning_rate': 6.959154165913609e-06, 'epoch': 1.54}
+{'loss': 0.7129, 'grad_norm': 14.754998207092285, 'learning_rate': 6.688053497198626e-06, 'epoch': 1.55}
+{'loss': 0.6622, 'grad_norm': 6.463582992553711, 'learning_rate': 6.416952828483644e-06, 'epoch': 1.57}
+{'loss': 0.7535, 'grad_norm': 16.543210983276367, 'learning_rate': 6.145852159768661e-06, 'epoch': 1.59}
+{'loss': 0.7512, 'grad_norm': 16.545812606811523, 'learning_rate': 5.8747514910536786e-06, 'epoch': 1.61}
+{'loss': 0.7076, 'grad_norm': 18.493330001831055, 'learning_rate': 5.603650822338695e-06, 'epoch': 1.63}
+{'loss': 0.7439, 'grad_norm': 17.93034553527832, 'learning_rate': 5.332550153623712e-06, 'epoch': 1.64}
+{'loss': 0.734, 'grad_norm': 14.299032211303711, 'learning_rate': 5.06144948490873e-06, 'epoch': 1.66}
+{'loss': 0.7572, 'grad_norm': 12.999855995178223, 'learning_rate': 4.790348816193747e-06, 'epoch': 1.68}
+{'loss': 0.7101, 'grad_norm': 11.987457275390625, 'learning_rate': 4.519248147478764e-06, 'epoch': 1.7}
+{'loss': 0.6993, 'grad_norm': 10.9462251663208, 'learning_rate': 4.248147478763781e-06, 'epoch': 1.72}
+{'loss': 0.7731, 'grad_norm': 8.763118743896484, 'learning_rate': 3.977046810048798e-06, 'epoch': 1.74}
+{'loss': 0.733, 'grad_norm': 13.71099853515625, 'learning_rate': 3.7059461413338156e-06, 'epoch': 1.75}
+{'loss': 0.693, 'grad_norm': 8.651556015014648, 'learning_rate': 3.4348454726188324e-06, 'epoch': 1.77}
+{'loss': 0.7155, 'grad_norm': 11.226234436035156, 'learning_rate': 3.1637448039038497e-06, 'epoch': 1.79}
+{'loss': 0.7079, 'grad_norm': 17.736896514892578, 'learning_rate': 2.892644135188867e-06, 'epoch': 1.81}
+{'loss': 0.7111, 'grad_norm': 14.28922176361084, 'learning_rate': 2.621543466473884e-06, 'epoch': 1.83}
+{'loss': 0.7368, 'grad_norm': 19.0494441986084, 'learning_rate': 2.3504427977589014e-06, 'epoch': 1.84}
+{'loss': 0.7456, 'grad_norm': 15.356032371520996, 'learning_rate': 2.0793421290439182e-06, 'epoch': 1.86}
+{'loss': 0.6832, 'grad_norm': 10.624104499816895, 'learning_rate': 1.8082414603289355e-06, 'epoch': 1.88}
+{'loss': 0.7006, 'grad_norm': 14.757559776306152, 'learning_rate': 1.5371407916139527e-06, 'epoch': 1.9}
+{'loss': 0.7283, 'grad_norm': 36.88719177246094, 'learning_rate': 1.2660401228989697e-06, 'epoch': 1.92}
+{'loss': 0.7239, 'grad_norm': 17.187673568725586, 'learning_rate': 9.949394541839872e-07, 'epoch': 1.93}
+{'loss': 0.6716, 'grad_norm': 25.626981735229492, 'learning_rate': 7.238387854690042e-07, 'epoch': 1.95}
+{'loss': 0.7121, 'grad_norm': 14.07251262664795, 'learning_rate': 4.5273811675402133e-07, 'epoch': 1.97}
+{'loss': 0.7076, 'grad_norm': 19.596080780029297, 'learning_rate': 1.816374480390385e-07, 'epoch': 1.99}
+Training time: 857.21 seconds
+07/06/2026 05:52:37 - INFO - __main__ - *** Evaluate ***
+{'train_runtime': 856.6198, 'train_samples_per_second': 206.682, 'train_steps_per_second': 12.918, 'train_loss': 1.0026272632923605, 'epoch': 2.0}
+Training time: 857.22 seconds
+***** train metrics *****
+  epoch                            =        2.0
+  measured_train_wall_time_seconds =     857.22
+  total_flos                       = 32315140GF
+  train_loss                       =     1.0026
+  train_runtime                    = 0:14:16.61
+  train_samples                    =      88524
+  train_samples_per_second         =    206.682
+  train_steps_per_second           =     12.918
+  world_size                       =          4
+07/06/2026 05:52:38 - INFO - __main__ - *** Evaluate ***
+07/06/2026 05:52:56 - INFO - utils_qa - Post-processing 10570 example predictions split into 10784 features.
+07/06/2026 05:53:27 - INFO - utils_qa - Saving predictions to /mnt/netapp2/Store_uni//home/ulc/cursos/curso395/bert_outputs/squad_distributed_a100/eval_predictions.json.
+07/06/2026 05:53:27 - INFO - utils_qa - Saving nbest_preds to /mnt/netapp2/Store_uni//home/ulc/cursos/curso395/bert_outputs/squad_distributed_a100/eval_nbest_predictions.json.
+***** eval metrics *****
+  epoch                   =        2.0
+  eval_exact_match        =    81.1164
+  eval_f1                 =    88.4441
+  eval_runtime            = 0:00:06.00
+  eval_samples            =      10784
+  eval_samples_per_second =   1795.442
+  eval_steps_per_second   =     56.108

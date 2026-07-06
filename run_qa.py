@@ -56,6 +56,7 @@ require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/ques
 logger = logging.getLogger(__name__)
 
 
+
 @dataclass
 class ModelArguments:
     """
@@ -457,7 +458,7 @@ def main():
             max_train_samples = min(len(train_dataset), data_args.max_train_samples)
             train_dataset = train_dataset.select(range(max_train_samples))
         # Create train feature from dataset
-        with training_args.main_process_first(desc="train dataset map pre-processing"):
+        with training_args.main_process_first(local=False, desc="train dataset map pre-processing"):
             train_dataset = train_dataset.map(
                 prepare_train_features,
                 batched=True,
@@ -527,7 +528,7 @@ def main():
             max_eval_samples = min(len(eval_examples), data_args.max_eval_samples)
             eval_examples = eval_examples.select(range(max_eval_samples))
         # Validation Feature Creation
-        with training_args.main_process_first(desc="validation dataset map pre-processing"):
+        with training_args.main_process_first(local=False, desc="validation dataset map pre-processing"):
             eval_dataset = eval_examples.map(
                 prepare_validation_features,
                 batched=True,
@@ -549,7 +550,7 @@ def main():
             # We will select sample from whole data
             predict_examples = predict_examples.select(range(data_args.max_predict_samples))
         # Predict Feature Creation
-        with training_args.main_process_first(desc="prediction dataset map pre-processing"):
+        with training_args.main_process_first(local=False, desc="prediction dataset map pre-processing"):
             predict_dataset = predict_examples.map(
                 prepare_validation_features,
                 batched=True,
@@ -635,13 +636,17 @@ def main():
         train_result = trainer.train(resume_from_checkpoint=checkpoint)
         end_time = time.time()
         trainer.save_model()  # Saves the tokenizer too for easy upload
-        elapsed_time = end_time -start_time
-        print(f"Training time: {elapsed_time:.2f} seconds")
+        elapsed_time = end_time - start_time
         metrics = train_result.metrics
         max_train_samples = (
             data_args.max_train_samples if data_args.max_train_samples is not None else len(train_dataset)
         )
         metrics["train_samples"] = min(max_train_samples, len(train_dataset))
+        metrics["measured_train_wall_time_seconds"] = round(elapsed_time, 2)
+        metrics["world_size"] = training_args.world_size
+
+        if training_args.should_log:
+            print(f"Training time: {elapsed_time:.2f} seconds")
 
         trainer.log_metrics("train", metrics)
         trainer.save_metrics("train", metrics)
